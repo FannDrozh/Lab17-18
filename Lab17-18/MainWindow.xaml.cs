@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace Lab17_18
 {
@@ -34,6 +35,7 @@ namespace Lab17_18
         }
         private void StartStopBtn_Click(object sender, RoutedEventArgs e)
         {
+            
             if (ButtonStateCheck == false)
             {
                 if (CheckPosition == 0)
@@ -57,6 +59,8 @@ namespace Lab17_18
                 CheckAswer();
                 timer.Stop();
             }
+           
+
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -87,6 +91,8 @@ namespace Lab17_18
         }
         public void CheckAswer()
         {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
             int sum1 = Convert.ToInt32(SumNumberOne.Text);
             int sum2 =  Convert.ToInt32(SumNumberTwo.Text);
             double sumAns = Convert.ToDouble(SumNumberAnswer.Text);
@@ -111,9 +117,11 @@ namespace Lab17_18
             {
                 MessageBox.Show("Проверь себя ты где-то ошибся!");
             }
+            sw.Stop();
         }
         public void StartTheQuiz()
         {
+            
             Random random = new Random();
 
             SumNumberOne.Text = random.Next(0, 20).ToString();
@@ -127,6 +135,7 @@ namespace Lab17_18
 
             DevNumberOne.Text = random.Next(0, 20).ToString();
             DevNumberTwo.Text = random.Next(1, 20).ToString();
+            
         }
     }
 }
