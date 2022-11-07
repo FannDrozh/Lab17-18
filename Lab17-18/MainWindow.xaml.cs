@@ -39,10 +39,11 @@ namespace Lab17_18
                 if (CheckPosition == 0)
                 {
                     start = Properties.Settings.Default.TimerStart;
+                    MessageBox.Show("Начнём!");
                 }
                 else if (CheckPosition != 0)
                 {
-                    start = CheckPosition;
+                    start = CheckPosition; 
                 }
                 timer.Start();
                 StartTheQuiz();
@@ -53,6 +54,7 @@ namespace Lab17_18
             {
                 CheckPosition = start;
                 ButtonStateCheck = false;
+                CheckAswer();
                 timer.Stop();
             }
         }
@@ -69,7 +71,9 @@ namespace Lab17_18
                 timer.Stop();
                 CheckPosition = 0;
                 ButtonStateCheck = false;
+                Time.Text = "Время вышло";
             }
+            
         }
         private void timerTxb_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
@@ -80,6 +84,33 @@ namespace Lab17_18
         {
             Properties.Settings.Default.TimerStart = Int32.Parse(Time.Text);
             this.Close();
+        }
+        public void CheckAswer()
+        {
+            int sum1 = Convert.ToInt32(SumNumberOne.Text);
+            int sum2 =  Convert.ToInt32(SumNumberTwo.Text);
+            double sumAns = Convert.ToDouble(SumNumberAnswer.Text);
+            sumAns = Math.Round(sumAns, 2);
+            int min1 = Convert.ToInt32(MinNumberOne.Text);
+            int min2 = Convert.ToInt32(MinNumberTwo.Text);
+            double minAns = Convert.ToDouble(MinNumberAnswer.Text);
+            minAns = Math.Round(minAns, 2);
+            int mul1 = Convert.ToInt32(MulNumberOne.Text);
+            int mul2 = Convert.ToInt32(MulNumberTwo.Text);
+            double mulAns = Convert.ToDouble(MulNumberAnswer.Text);
+            mulAns = Math.Round(mulAns, 2);
+            int dev1 = Convert.ToInt32(DevNumberOne.Text);
+            int dev2 = Convert.ToInt32(DevNumberTwo.Text);
+            double devAns = Convert.ToDouble(DevNumberAnswer.Text);
+            devAns = Math.Round(devAns, 2);
+            if (sum1 + sum2 == sumAns && min1 - min2 == minAns && mul1 * mul2 == mulAns && dev1 / dev2 == devAns)
+            {
+                MessageBox.Show("Ответы верны, поздравляю!");
+            }
+            else
+            {
+                MessageBox.Show("Проверь себя ты где-то ошибся!");
+            }
         }
         public void StartTheQuiz()
         {
@@ -95,7 +126,7 @@ namespace Lab17_18
             MulNumberTwo.Text = random.Next(0, 20).ToString();
 
             DevNumberOne.Text = random.Next(0, 20).ToString();
-            DevNumberTwo.Text = random.Next(0, 20).ToString();
+            DevNumberTwo.Text = random.Next(1, 20).ToString();
         }
     }
 }

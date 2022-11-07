@@ -42,26 +42,26 @@
         <TextBlock Grid.Column="1" Grid.Row="1" Text="+" FontSize="30" TextAlignment="Center" Margin="54,15,54,15"/>
         <TextBox x:Name="SumNumberTwo" Margin="55,15,55,15" Grid.Row="1" Grid.Column="2" IsEnabled="False" Text="?"/>
         <TextBlock Grid.Column="3" Grid.Row="1" Text="=" FontSize="30" TextAlignment="Center" Margin="54,15,54,15"/>
-        <TextBox x:Name="SumNumberAnswer" Margin="55,15,55,15" Grid.Row="1" Grid.Column="4"/>
+        <TextBox x:Name="SumNumberAnswer" Margin="55,15,55,15" Grid.Row="1" Grid.Column="4" Text="0"/>
         
         <TextBox x:Name="MinNumberOne" Margin="55,15,55,15" Grid.Row="2" IsEnabled="False" Text="?"/>
         <TextBlock Grid.Column="1" Grid.Row="2" Text="-" FontSize="30" TextAlignment="Center" Margin="54,15,54,15"/>
         <TextBox x:Name="MinNumberTwo" Margin="55,15,55,15" Grid.Row="2" Grid.Column="2" IsEnabled="False" Text="?"/>
         <TextBlock Grid.Column="3" Grid.Row="2" Text="=" FontSize="30" TextAlignment="Center" Margin="54,15,54,15"/>
-        <TextBox x:Name="MinNumberAnswer" Margin="55,15,55,15" Grid.Row="2" Grid.Column="4"/>
+        <TextBox x:Name="MinNumberAnswer" Margin="55,15,55,15" Grid.Row="2" Grid.Column="4" Text="0"/>
         
         
         <TextBox x:Name="MulNumberOne" Margin="55,15,55,15" Grid.Row="3" IsEnabled="False" Text="?"/>
         <TextBlock Grid.Column="1" Grid.Row="3" Text="*" FontSize="30" TextAlignment="Center" Margin="54,15,54,15"/>
         <TextBox x:Name="MulNumberTwo" Margin="55,15,55,15" Grid.Row="3" Grid.Column="2" IsEnabled="False" Text="?"/>
         <TextBlock Grid.Column="3" Grid.Row="3" Text="=" FontSize="30" TextAlignment="Center" Margin="54,15,54,15"/>
-        <TextBox x:Name="MulNumberAnswer" Margin="55,15,55,15" Grid.Row="3" Grid.Column="4"/>
+        <TextBox x:Name="MulNumberAnswer" Margin="55,15,55,15" Grid.Row="3" Grid.Column="4" Text="0"/>
         
         <TextBox x:Name="DevNumberOne" Margin="55,15,55,15" Grid.Row="4" IsEnabled="False" Text="?"/>
         <TextBlock Grid.Column="1" Grid.Row="4" Text="/" FontSize="30" TextAlignment="Center" Margin="54,15,54,15"/>
         <TextBox x:Name="DevNumberTwo" Margin="55,15,55,15" Grid.Row="4" Grid.Column="2" IsEnabled="False" Text="?"/>
         <TextBlock Grid.Column="3" Grid.Row="4" Text="=" FontSize="30" TextAlignment="Center" Margin="54,15,54,15"/>
-        <TextBox x:Name="DevNumberAnswer" Margin="55,15,55,15" Grid.Row="4" Grid.Column="4"/>
+        <TextBox x:Name="DevNumberAnswer" Margin="55,15,55,15" Grid.Row="4" Grid.Column="4" Text="0"/>
 
         <Button x:Name="Start"
                 Grid.Column="2"
