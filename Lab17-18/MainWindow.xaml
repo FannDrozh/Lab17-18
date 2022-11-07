@@ -29,7 +29,7 @@
                  TextWrapping="Wrap" 
                  FontSize="30"
                  TextAlignment="Center"
-                 TextChanged="TextBox_TextChanged" 
+                 PreviewTextInput="timerTxb_PreviewTextInput"
                  HorizontalAlignment="Left" 
                  Width="242" 
                  Height="45" 
@@ -67,6 +67,6 @@
                 Grid.Column="2"
                 Grid.Row="5" 
                 Margin="10,10,10,10"
-                Content="Start the quiz" Click="Start_Click"/>
+                Content="Start the quiz" Click="StartStopBtn_Click"/>
     </Grid>
 </Window>
